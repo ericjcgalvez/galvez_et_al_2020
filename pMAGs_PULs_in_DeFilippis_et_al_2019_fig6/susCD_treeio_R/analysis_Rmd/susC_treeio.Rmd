@@ -1,0 +1,140 @@
+---
+title: "Phylo Tree trSusC Prevotella"
+author: "Eric J.C. Galvez"
+date: "2/3/2020"
+output: 
+  html_document: 
+    highlight: pygments
+    theme: flatly
+    code_download: true
+    graphics: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: inline
+---
+__Last modification:__ `r format(Sys.time(), '%d %B, %Y')`
+
+@EricJCGalvez
+
+<!-- more -->
+
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+# check.packages function: install and load multiple R packages.
+# Check to see if packages are installed. Install them if they are not, then load them into the R session.
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+
+# Usage example
+packages<-c("tidyverse", "ggplot2", "ggthemes", "knitr", "DT", "ggpubr", "ggsci", 
+            "data.table", "ggtree", "ape", "treeio", "here")
+check.packages(packages)
+```
+
+## load tree
+```{r}
+tree <- treeio::read.newick("../data//RAxML_bipartitions.susC_rooted.newick")
+
+##Checking the clade number
+## Is necesary to plor first removing the " aes(color=group)"
+## then running the command MRCA and the plot interval is posible to get the node number
+
+node_rnode_ref <-252
+tree2 <- groupClade(tree, .node = c(252, 225, 243))
+
+
+df <- as.tbl(read_delim("../data/tree_io_metadata_susC_R.txt", delim = "\t"))
+
+rownames(df) <- df$tip_id               
+setDT(df, keep.rownames = TRUE)[]
+
+colnames(df)[1] <- "label"
+
+tree_df <-  treeio::full_join(tree2, df, by = 'label')
+
+
+###### To check node number ID ## susc1_xylL does not fit I don"t know why!
+
+#susc2_xylL <- MRCA(p, "BACOVA_03428_XylL_SusC2", "MAG609_01226") #252
+#susc1_xylL <- MRCA(p, "MAG609_01226", "BACOVA_03426_XylL_SusC1") #243
+#susc1_xylS <- MRCA(p, "MAG611_01470", "BACOVA_04393_XylS_SusC1") #225
+
+
+tree_df@data$group
+```
+
+
+```{r, fig.height=9, fig.width=6}
+
+levels(factor(df$Genome_MAG))
+
+my_col_host= c("0"="black", "1"="#2166ac", "2"="#2166ac", "3"="#2166ac",
+               "BACOVA_Xul"="#fec44f","MAG609"="#cb181d",
+               "Mouse Prevotella"="#a8ddb5", "PINT"="#fb8072", "P. copri MAG"="#525252")
+
+p <- p <- ggtree(tr = tree_df, layout = "rectangular", aes(color=group), right = TRUE , size=1) +
+      geom_tippoint(aes(color=Genome_MAG), size=1.5, alpha= 0.7) +
+      scale_color_manual(values=my_col_host) +
+      geom_rootedge(0.01)
+p
+
+## number infered from MRCA function
+clade1 <- 252
+clade2 <- 243
+clade3 <- 225
+
+p1 <- scaleClade(p, node=252, scale=1) %>% 
+  scaleClade(., node=243, scale=1)  %>% 
+  scaleClade(., node=225, scale=1)
+
+p2 <- p + geom_hilight(node=clade1, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_hilight(node=clade2, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_hilight(node=clade3, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_tiplab(aes(label=TipLabels, na.omit=T), linetype=NA, align = F,
+                  vjust=0.5, hjust=-.1, color= "black",
+                  size=1.5, offset = .005)
+
+p2
+
+#export 6x9
+```
+
+
+```{r, fig.align='center', fig.height=14, fig.width=18}
+
+p <- ggtree(tr = tree_df, layout = "fan", aes(color=group, fill=Genome_MAG), size=1, 
+            open.angle = 15, right = T) +
+      #geom_tippoint(aes(color=Genome_MAG), size=1, alpha= 0.7, shape= c(10)) +
+      geom_point(aes(shape=Genome_MAG, color=Genome_MAG, alpha= 0.9, size=2), na.rm=TRUE) +
+      scale_shape_manual(values = c(16, 20, 20, 20, 1)) +
+      scale_color_manual(values=my_col_host) +
+      scale_fill_manual(values=my_col_host) +
+      geom_rootedge(0.5)
+p
+
+p1 <- scaleClade(p, node=252, scale=1) %>% 
+  scaleClade(., node=243, scale=1)  %>% 
+  scaleClade(., node=225, scale=1)
+
+
+clade1 <- 252
+clade2 <- 243
+clade3 <- 225
+
+p3 <- p1 +
+    geom_hilight(node=clade1, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_hilight(node=clade2, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_hilight(node=clade3, fill="#6a51a3", alpha=.3, extend = 1) +
+    geom_tiplab(aes(label=TipLabels, na.omit=T), linetype=NA, align = F,
+                  vjust=0.5, hjust=-.1, color= "black",
+                  size=2, offset = .005)
+
+p3
+
+#export 6 x 9
+```

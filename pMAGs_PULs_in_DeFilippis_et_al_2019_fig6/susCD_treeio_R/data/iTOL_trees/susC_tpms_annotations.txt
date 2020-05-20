@@ -1,0 +1,130 @@
+DATASET_MULTIBAR
+#In multi-value bar charts, each ID is associated to multiple numeric values, which are displayed as a stacked or aligned bar chart
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,TPMs
+
+#dataset color (can be changed later)
+COLOR,#ff0000
+
+#define colors for each individual field column (use hexadecimal, RGB or RGBA notation; if using RGB/RGBA, COMMA cannot be used as SEPARATOR)
+FIELD_COLORS,#fddbc7,#d6604d,#67001f,#d1e5f0,#4393c3,#053061,#fee0b6,#fdb863,#e08214
+
+#field labels
+FIELD_LABELS,PINT_invitro,PINT_eSPF,PINT_Conv,PROD_invitro,PROD_eSPF,PROD_Conv,PMUR_invitro,PMUR_eSPF,PMUR_Conv
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#dataset scale: you can simply set the values where the scale will be drawn
+DATASET_SCALE,500,1000,20000
+#or you can specify value, label, color, width, style and label size factor for each scale line (dash separated, format: VALUE-LABEL-COLOR-WIDTH-DASHED-LABEL_SCALE_FACTOR)) 
+#DATASET_SCALE,2000-2k line-#0000ff-5-1-1,10000-line at 10k-#ff0000-1-0-2,20000-3rd line-#00ff00-5-1-1
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 6:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE,TPMs
+LEGEND_SHAPES,1,1,1,1,1,1,1,1,1
+LEGEND_COLORS,#fddbc7,#d6604d,#67001f,#d1e5f0,#4393c3,#053061,#fee0b6,#fdb863,#e08214
+LEGEND_LABELS,PINT_invitro,PINT_eSPF,PINT_Conv,PROD_invitro,PROD_eSPF,PROD_Conv,PMUR_invitro,PMUR_eSPF,PMUR_Conv
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#maximum width
+#WIDTH,1000
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN,0
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL,0
+
+#bar height factor; Default bar height will be slightly less than the available space between leaves, but you can set a multiplication factor here to increase/decrease it (values from 0 to 1 will decrease it, values above 1 will increase it)
+#HEIGHT_FACTOR,1
+
+#Bars are aligned to the node lines by default. Using BAR_SHIFT, you can move them all up/down by a fixed amount
+#BAR_SHIFT,0
+
+#align individual fields; if set to 1, individual bar charts will not be stacked
+#ALIGN_FIELDS,0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the bars
+#BORDER_WIDTH,0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR,#0000ff
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+PINT_00867,57.83,199.89,465.07,0,0,0,0,0,0
+PINT_01043,14.09,7.88,9.82,0,0,0,0,0,0
+PINT_01251,7.26,42.79,29.76,0,0,0,0,0,0
+PINT_01255,2.17,14.58,2.56,0,0,0,0,0,0
+PINT_01265,0.19,0.47,0.36,0,0,0,0,0,0
+PINT_01427,108.89,176.47,284.11,0,0,0,0,0,0
+PINT_01461,191.46,6.19,135.88,0,0,0,0,0,0
+PINT_01465,7.87,2.80,4.78,0,0,0,0,0,0
+PINT_01542,23.09,179.21,259.32,0,0,0,0,0,0
+PINT_01544,13.72,179.86,190.30,0,0,0,0,0,0
+PINT_01685,3.00,5.36,16.25,0,0,0,0,0,0
+PINT_01767,12.86,57.73,121.73,0,0,0,0,0,0
+PINT_01777,0.17,2.32,2.53,0,0,0,0,0,0
+PINT_01817,2.04,431.77,664.67,0,0,0,0,0,0
+PINT_01819,3.93,412.86,944.06,0,0,0,0,0,0
+PINT_01928,132.13,156.74,245.46,0,0,0,0,0,0
+PINT_01930,3.32,64.69,234.61,0,0,0,0,0,0
+PINT_01935,0.78,34.66,97.35,0,0,0,0,0,0
+PINT_02085,65.71,189.41,375.46,0,0,0,0,0,0
+PINT_02087,0.12,1.51,5.47,0,0,0,0,0,0
+PINT_02091,55.98,306.07,479.65,0,0,0,0,0,0
+PINT_02107,113.01,2.74,3.41,0,0,0,0,0,0
+PINT_02110,0.22,1.71,4.09,0,0,0,0,0,0
+PINT_02113,127.14,170.53,43.19,0,0,0,0,0,0
+PINT_02498,6.14,130.50,23.59,0,0,0,0,0,0
+PINT_02792,116.16,75.54,85.97,0,0,0,0,0,0
+PROD_00473,0,0,0,45.07,127.13,219.29,0,0,0
+PROD_00837,0,0,0,2.25,139.53,193.90,0,0,0
+PROD_00841,0,0,0,0.87,93.79,140.18,0,0,0
+PROD_01146,0,0,0,1.34,2.09,4.10,0,0,0
+PROD_01370,0,0,0,2.26,165.84,108.29,0,0,0
+PROD_01882,0,0,0,13.99,169.82,8.48,0,0,0
+PROD_02118,0,0,0,97.27,92.61,156.73,0,0,0
+PROD_02122,0,0,0,39.97,84.28,91.15,0,0,0
+PROD_02216,0,0,0,0.55,0.67,3.29,0,0,0
+PROD_02441,0,0,0,45.36,132.28,200.36,0,0,0
+PROD_02445,0,0,0,69.29,98.02,194.36,0,0,0
+PROD_02830,0,0,0,81.68,184.94,377.72,0,0,0
+PMUR_00211,0,0,0,0,0,0,7.56,2.02,1.66
+PMUR_00219,0,0,0,0,0,0,169.11,343.14,354.04
+PMUR_00223,0,0,0,0,0,0,151.62,333.66,355.90
+PMUR_00329,0,0,0,0,0,0,98.51,272.53,244.31
+PMUR_00333,0,0,0,0,0,0,138.22,308.53,262.73
+PMUR_01155,0,0,0,0,0,0,4.15,6.24,2.36
+PMUR_01261,0,0,0,0,0,0,564.01,977.53,972.32
+PMUR_01354,0,0,0,0,0,0,234.10,474.34,625.30
+PMUR_02430,0,0,0,0,0,0,11.77,277.76,177.38
+PMUR_02434,0,0,0,0,0,0,13.67,250.60,143.98

@@ -1,0 +1,668 @@
+# bin	superkingdom	phylum	class	order	family	genus	species
+MAG001	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus mucosae
+MAG002	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Z-noStdName
+MAG003	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Z-noStdName
+MAG004	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Z-noStdName
+MAG005	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Z-noStdName
+MAG006	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Z-noStdName
+MAG007	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Z-noStdName
+MAG008	Bacteria	Firmicutes	Bacilli	Lactobacillales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG009	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Z-noStdName
+MAG010	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Z-noStdName
+MAG011	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Z-noStdName
+MAG012	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Z-noStdName
+MAG013	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Pediococcus	Pediococcus acidilactici*
+MAG014	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Z-noStdName	Z-noStdName
+MAG015	Bacteria	Firmicutes	Bacilli	Lactobacillales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG016	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG017	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG018	Bacteria	Candidatus Melainabacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Candidatus Melainabacteria bacterium
+MAG019	Bacteria	Candidatus Melainabacteria	Z-noStdName	Candidatus Gastranaerophilales	Z-noStdName	Z-noStdName	Candidatus Gastranaerophilales bacterium HUM_9
+MAG020	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium sp. CAG
+MAG021	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG022	Bacteria	Spirochaetes	Spirochaetia	Brachyspirales	Brachyspiraceae	Brachyspira	Brachyspira sp. CAG
+MAG023	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG024	Bacteria	Spirochaetes	Spirochaetia	Brachyspirales	Brachyspiraceae	Brachyspira	Brachyspira sp. CAG
+MAG025	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Helicobacteraceae	Helicobacter	Z-noStdName
+MAG026	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG027	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG028	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG029	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Z-noStdName	Z-noStdName
+MAG030	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG031	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Catenibacterium	Z-noStdName
+MAG032	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG033	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG034	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG035	Archaea	Euryarchaeota	Methanobacteria	Methanobacteriales	Methanobacteriaceae	Methanobrevibacter	Z-noStdName
+MAG036	Archaea	Euryarchaeota	Methanobacteria	Methanobacteriales	Methanobacteriaceae	Methanobrevibacter	Methanobrevibacter smithii
+MAG037	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG038	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium ventriosum
+MAG039	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG040	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG041	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG042	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG043	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG044	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG045	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG046	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG047	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG048	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG049	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG050	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG051	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG052	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG053	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG054	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG055	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG056	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG057	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG058	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG059	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG060	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG061	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG062	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. 26_22
+MAG063	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG064	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG065	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Megamonas	Z-noStdName
+MAG066	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG067	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG068	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG069	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG070	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG071	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG072	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG073	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Coprobacillus	Coprobacillus sp. CAG
+MAG074	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG075	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG076	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG077	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG078	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG079	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG080	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG081	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG082	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG083	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG084	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG085	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG086	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG087	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG088	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG089	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG090	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Oxalobacter	Oxalobacter formigenes
+MAG091	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Oxalobacter	Oxalobacter formigenes
+MAG092	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Oxalobacter	Oxalobacter formigenes
+MAG093	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Holdemania	Holdemania filiformis
+MAG094	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Z-noStdName
+MAG095	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum sp. 51_20
+MAG096	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Z-noStdName
+MAG097	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum sp. CAG
+MAG098	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Z-noStdName
+MAG099	Bacteria	Proteobacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Proteobacteria bacterium CAG
+MAG100	Bacteria	Proteobacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG101	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG102	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG103	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Z-noStdName	Z-noStdName
+MAG104	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Z-noStdName	Z-noStdName
+MAG105	Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Merdibacter	Merdibacter massiliensis*
+MAG106	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Sutterella sp. KGMB03119
+MAG107	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Sutterella sp. KGMB03119
+MAG108	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Z-noStdName
+MAG109	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Z-noStdName
+MAG110	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Z-noStdName	Z-noStdName
+MAG111	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Z-noStdName	Z-noStdName
+MAG112	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Sutterella sp. AM11-39
+MAG113	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Sutterella sp. AM11-39
+MAG114	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Sutterella	Sutterella sp. AM11-39
+MAG115	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Sutterellaceae	Z-noStdName	Z-noStdName
+MAG116	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG117	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter sp. CAG
+MAG118	Bacteria	Verrucomicrobia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG119	Bacteria	Verrucomicrobia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG120	Bacteria	Verrucomicrobia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG121	Bacteria	Verrucomicrobia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG122	Bacteria	Verrucomicrobia	Opitutae	Puniceicoccales	Puniceicoccaceae	Coraliomargarita	Coraliomargarita sp. CAG
+MAG123	Bacteria	Verrucomicrobia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG124	Bacteria	Lentisphaerae	Lentisphaeria	Victivallales	Z-noStdName	Z-noStdName	Victivallales bacterium CCUG 44730*
+MAG125	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG126	Bacteria	Lentisphaerae	Lentisphaeria	Victivallales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG127	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG128	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG129	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG130	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG131	Bacteria	Verrucomicrobia	Verrucomicrobiae	Verrucomicrobiales	Akkermansiaceae	Akkermansia*	Z-noStdName
+MAG132	Bacteria	Verrucomicrobia	Verrucomicrobiae	Verrucomicrobiales	Akkermansiaceae	Akkermansia*	Z-noStdName
+MAG133	Bacteria	Verrucomicrobia	Verrucomicrobiae	Verrucomicrobiales	Akkermansiaceae	Akkermansia*	Z-noStdName
+MAG134	Bacteria	Lentisphaerae	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG135	Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Succinivibrionaceae	Z-noStdName	Z-noStdName
+MAG136	Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Succinivibrionaceae	Z-noStdName	Z-noStdName
+MAG137	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Z-noStdName	Z-noStdName	Selenomonadales bacterium*
+MAG138	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG139	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG140	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	uncultured Eubacterium sp.
+MAG141	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG142	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG143	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG144	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG145	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG146	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG147	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG148	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG149	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus lactaris
+MAG150	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Z-noStdName	Z-noStdName
+MAG151	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG152	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG153	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Z-noStdName
+MAG154	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG155	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG156	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG157	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG158	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG159	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG160	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio sp. CAG
+MAG161	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG162	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG163	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia sp. CAG
+MAG164	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG165	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG166	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG167	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG168	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Z-noStdName	Z-noStdName
+MAG169	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG170	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG171	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG172	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG173	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG174	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG175	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG176	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG177	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG178	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG179	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG180	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG181	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG182	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG183	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG184	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG185	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG186	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG187	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG188	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG189	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	uncultured Clostridium sp.
+MAG190	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Z-noStdName
+MAG191	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Z-noStdName	Z-noStdName
+MAG192	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Coprococcus	Z-noStdName
+MAG193	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Coprococcus	Z-noStdName
+MAG194	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG195	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG196	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG197	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG198	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia hominis
+MAG199	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG200	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG201	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG202	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia sp. CAG
+MAG203	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG204	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Z-noStdName	Lachnospiraceae bacterium TWA4
+MAG205	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Coprococcus	Coprococcus catus
+MAG206	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG207	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG208	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG209	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG210	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Coprococcus	Z-noStdName
+MAG211	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Dorea	Z-noStdName
+MAG212	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Z-noStdName
+MAG213	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG214	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG215	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG216	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG217	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG218	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG219	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG220	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Z-noStdName	Z-noStdName
+MAG221	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	Phascolarctobacterium sp. CAG
+MAG222	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	Phascolarctobacterium succinatutens
+MAG223	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	Phascolarctobacterium succinatutens
+MAG224	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	Z-noStdName
+MAG225	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister succinatiphilus
+MAG226	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister succinatiphilus
+MAG227	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister succinatiphilus
+MAG228	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister sp. CAG
+MAG229	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister sp. CAG
+MAG230	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Z-noStdName
+MAG231	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Z-noStdName
+MAG232	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Acidaminococcus	Acidaminococcus timonensis
+MAG233	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Acidaminococcus	Acidaminococcus fermentans
+MAG234	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Acidaminococcus	Z-noStdName
+MAG235	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Megasphaera	Z-noStdName
+MAG236	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Megasphaera	Z-noStdName
+MAG237	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Megasphaera	Z-noStdName
+MAG238	Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Megasphaera	Megasphaera micronuciformis
+MAG239	Bacteria	Firmicutes	Negativicutes	Acidaminococcales	Acidaminococcaceae	Succiniclasticum	Succiniclasticum ruminis*
+MAG240	Bacteria	Actinobacteria	Actinobacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG241	Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces bouchesdurhonensis
+MAG242	Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces graevenitzii
+MAG243	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG244	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG245	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium animalis
+MAG246	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG247	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG248	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG249	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Z-noStdName
+MAG250	Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium pseudolongum
+MAG251	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Z-noStdName
+MAG252	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Z-noStdName
+MAG253	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Z-noStdName
+MAG254	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Olsenella provencensis
+MAG255	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Parolsenella	Parolsenella catena*
+MAG256	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Z-noStdName	Z-noStdName
+MAG257	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Enorma	Z-noStdName
+MAG258	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG259	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG260	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG261	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG262	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG263	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG264	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG265	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG266	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG267	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG268	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG269	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Z-noStdName
+MAG270	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella intestinalis
+MAG271	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Slackia	Slackia piriformis
+MAG272	Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Senegalimassilia	Senegalimassilia sp. KGMB04484
+MAG273	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG274	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG275	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Coriobacteriia bacterium*
+MAG276	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Z-noStdName	Z-noStdName
+MAG277	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Gordonibacter	Gordonibacter pamelaeae
+MAG278	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG279	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Z-noStdName	Z-noStdName
+MAG280	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Coriobacteriia bacterium*
+MAG281	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Coriobacteriia bacterium*
+MAG282	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Eggerthella	Z-noStdName
+MAG283	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Eggerthella	Z-noStdName
+MAG284	Bacteria	Actinobacteria	Coriobacteriia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG285	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Eggerthella	Eggerthella sp. CAG
+MAG286	Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Cryptobacterium	Cryptobacterium sp. CAG
+MAG287	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG288	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG289	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG290	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG291	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG292	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus sp. CAG
+MAG293	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus sp. CAG
+MAG294	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG295	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG296	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG297	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium 41_21_two_genomes
+MAG298	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium coprostanoligenes
+MAG299	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG300	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG301	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG302	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG303	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG304	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG305	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG306	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG307	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG308	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG309	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG310	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG311	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Z-noStdName
+MAG312	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG313	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG314	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG315	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG316	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG317	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG318	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG319	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG320	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG321	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG322	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG323	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG324	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG325	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG326	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG327	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus sp. CAG
+MAG328	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG329	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG330	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG331	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG332	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG333	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG334	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG335	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG336	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG337	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acidiphilium	Acidiphilium sp. CAG
+MAG338	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG339	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG340	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Subdoligranulum	Z-noStdName
+MAG341	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Subdoligranulum	Subdoligranulum sp. CAG
+MAG342	Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcaceae	Corallococcus	Corallococcus sp. CAG
+MAG343	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG344	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG345	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG346	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG347	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG348	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG349	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG350	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG351	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG352	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG353	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG354	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium
+MAG355	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acidiphilium	Acidiphilium sp. CAG
+MAG356	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acidiphilium	Acidiphilium sp. CAG
+MAG357	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG358	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acidiphilium	Acidiphilium sp. CAG
+MAG359	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium sp. CAG
+MAG360	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG361	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG362	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG363	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG364	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG365	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG366	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium
+MAG367	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium
+MAG368	Bacteria	Firmicutes	Clostridia	Candidatus Borkfalkiales	Candidatus Borkfalkiaceae*	Candidatus Borkfalkia*	Candidatus Borkfalkia ceftriaxoniphila*
+MAG369	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG370	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG371	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG372	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Z-noStdName	Z-noStdName
+MAG373	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG374	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Desulfovibrio	Desulfovibrio piger
+MAG375	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Desulfovibrio	Desulfovibrio piger
+MAG376	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Desulfovibrio	Z-noStdName
+MAG377	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Bilophila	Z-noStdName
+MAG378	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Bilophila	Z-noStdName
+MAG379	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Bilophila	Z-noStdName
+MAG380	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Z-noStdName	Desulfovibrionaceae bacterium
+MAG381	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Z-noStdName	Desulfovibrionaceae bacterium
+MAG382	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Mailhella	Mailhella massiliensis*
+MAG383	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfovibrionales	Desulfovibrionaceae	Desulfovibrio	Z-noStdName
+MAG384	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium D5
+MAG385	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG386	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG387	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG388	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG389	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG390	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium Marseille-P2846
+MAG391	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium Marseille-P2846
+MAG392	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium Marseille-P2846
+MAG393	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG394	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium Marseille-P2846
+MAG395	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG396	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG397	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG398	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG399	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG400	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG401	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG402	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG403	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Butyricicoccus	Z-noStdName
+MAG404	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Butyricicoccus	Z-noStdName
+MAG405	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG406	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Butyricicoccus	Butyricicoccus porcorum
+MAG407	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG408	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG409	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG410	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG411	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG412	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG413	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG414	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG415	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG416	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Z-noStdName
+MAG417	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG418	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG419	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG420	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG421	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG422	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Clostridia bacterium
+MAG423	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG424	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Z-noStdName
+MAG425	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG426	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG427	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG428	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG429	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG430	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG431	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG432	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG433	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG434	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG435	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG436	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG437	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG438	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG439	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG440	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG441	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG442	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG443	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Clostridia bacterium
+MAG444	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG445	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG446	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG447	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG448	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG449	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG450	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG451	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG452	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG453	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG454	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG455	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG456	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG457	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG458	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG459	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG460	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG461	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG462	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG463	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG464	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG465	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG466	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Z-noStdName
+MAG467	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Z-noStdName
+MAG468	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG469	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG470	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG471	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG472	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG473	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG474	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Oscillibacter sp. 57_20
+MAG475	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Oscillibacter sp. 57_20
+MAG476	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Oscillibacter sp. 57_20
+MAG477	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Z-noStdName	Z-noStdName
+MAG478	Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Z-noStdName	Z-noStdName
+MAG479	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG480	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG481	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG482	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG483	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG484	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG485	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG486	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG487	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG488	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG489	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG490	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG491	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG492	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG493	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG494	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG495	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Subdoligranulum	Subdoligranulum sp. APC924/74
+MAG496	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG497	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG498	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG499	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii
+MAG500	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG501	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii
+MAG502	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG503	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii
+MAG504	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG505	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG506	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG507	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG508	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Z-noStdName
+MAG509	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG510	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG511	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG512	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Z-noStdName	Z-noStdName	Selenomonadales bacterium*
+MAG513	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Z-noStdName	Z-noStdName	Selenomonadales bacterium*
+MAG514	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Z-noStdName	Z-noStdName	Selenomonadales bacterium*
+MAG515	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG516	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG517	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG518	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG519	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG520	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG521	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG522	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium sp. CAG
+MAG523	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG524	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG525	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG526	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG527	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG528	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Clostridia bacterium
+MAG529	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Clostridia bacterium
+MAG530	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG531	Bacteria	Firmicutes	Clostridia	Z-noStdName	Z-noStdName	Z-noStdName	Clostridia bacterium
+MAG532	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG533	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG534	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG535	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Z-noStdName
+MAG536	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG537	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus sp. CAG
+MAG538	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus sp. CAG
+MAG539	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG540	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG541	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG542	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG543	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG544	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus sp. CAG
+MAG545	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG546	Bacteria	Firmicutes	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Firmicutes bacterium CAG
+MAG547	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Z-noStdName	Ruminococcaceae bacterium
+MAG548	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG549	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG550	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG551	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG552	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG553	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Mitsuokella	Mitsuokella multacida
+MAG554	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Mitsuokella	Mitsuokella jalaludinii
+MAG555	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG556	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG557	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG558	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG559	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG560	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG561	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CAG
+MAG562	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG563	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Clostridiales bacterium
+MAG564	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes sp. CAG
+MAG565	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes sp. CAG
+MAG566	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CAG
+MAG567	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CAG
+MAG568	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CAG
+MAG569	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG570	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG571	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG572	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG573	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG574	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes ihumii
+MAG575	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes indistinctus
+MAG576	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes indistinctus
+MAG577	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG578	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes sp. CAG
+MAG579	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes sp. 5CPEGH6
+MAG580	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG581	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes senegalensis
+MAG582	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG583	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG584	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG585	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG586	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG587	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG588	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Z-noStdName
+MAG589	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Bacteroidales bacterium 55_9
+MAG590	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Z-noStdName	Z-noStdName	Flavobacteriales bacterium
+MAG591	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Z-noStdName	Z-noStdName
+MAG592	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG593	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG594	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG595	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG596	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG597	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG598	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG599	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG600	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Z-noStdName	Prevotellaceae bacterium
+MAG601	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Z-noStdName	Z-noStdName
+MAG602	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Z-noStdName	Z-noStdName
+MAG603	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Z-noStdName	Z-noStdName
+MAG604	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG605	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG606	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG607	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG608	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG609	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG610	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG611	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG612	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG613	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG614	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG615	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella multisaccharivorax
+MAG616	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG617	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG618	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG619	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG620	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG621	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. 885
+MAG622	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Z-noStdName
+MAG623	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Z-noStdName	Z-noStdName
+MAG624	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG625	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG626	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG627	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG628	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Z-noStdName	Z-noStdName
+MAG629	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Z-noStdName	Z-noStdName
+MAG630	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CAG
+MAG631	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Z-noStdName	Z-noStdName
+MAG632	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Z-noStdName	Z-noStdName
+MAG633	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. CAG
+MAG634	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG635	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CAG
+MAG636	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG637	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Tannerellaceae	Parabacteroides	Z-noStdName
+MAG638	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG639	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Tannerellaceae	Parabacteroides	Parabacteroides sp. CAG
+MAG640	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Z-noStdName	Z-noStdName
+MAG641	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG642	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG643	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG644	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG645	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG646	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG647	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG648	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG649	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG650	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG651	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG652	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Z-noStdName
+MAG653	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Paraprevotella	Z-noStdName
+MAG654	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Paraprevotella	Z-noStdName
+MAG655	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Z-noStdName	Prevotellaceae bacterium
+MAG656	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Odoribacteraceae	Z-noStdName	Z-noStdName
+MAG657	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Odoribacteraceae	Butyricimonas	Z-noStdName
+MAG658	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Odoribacteraceae	Odoribacter	Z-noStdName
+MAG659	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG660	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG661	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG662	Bacteria	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName	Z-noStdName
+MAG663	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Z-noStdName	Z-noStdName
+MAG664	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Z-noStdName	Z-noStdName
+MAG665	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG666	Bacteria	Firmicutes	Clostridia	Clostridiales	Z-noStdName	Z-noStdName	Z-noStdName
+MAG667	Archaea	Euryarchaeota	Thermoplasmata	Methanomassiliicoccales	Z-noStdName	Z-noStdName	Methanomassiliicoccales archaeon Mx-06

@@ -1,0 +1,232 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+#SEPARATOR TAB
+#SEPARATOR COMMA
+SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL label1
+
+#dataset color (can be changed later)
+COLOR #ff0000
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES 0
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 6:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE Dataset_legend
+LEGEND_SHAPES 1 1 2 2
+LEGEND_COLORS #ff0000 #00ff00 rgba(0,255,0,0.5) #0000ff
+LEGEND_LABELS value1 value2 value3 value4
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip 
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA 
+BACOVA_03426_XylL_SusC1 #feb24c
+BACOVA_03428_XylL_SusC2 #feb24c
+BACOVA_04393_XylS_SusC1 #feb24c
+MAG609_00226 #e31a1c
+MAG609_00349 #e31a1c
+MAG609_00419 #e31a1c
+MAG609_00514 #e31a1c
+MAG609_00635 #e31a1c
+MAG609_00939 #e31a1c
+MAG609_01012 #e31a1c
+MAG609_01017 #e31a1c
+MAG609_01224 #e31a1c
+MAG609_01226 #e31a1c
+MAG609_01284 #e31a1c
+MAG609_01297 #e31a1c
+MAG609_01299 #e31a1c
+MAG609_01317 #e31a1c
+MAG609_01324 #e31a1c
+MAG609_01336 #e31a1c
+MAG609_01583 #e31a1c
+MAG609_01822 #e31a1c
+MAG609_01858 #e31a1c
+MAG609_01985 #e31a1c
+MAG609_02114 #e31a1c
+MAG609_02261 #e31a1c
+MAG609_02293 #e31a1c
+MAG609_02310 #e31a1c
+MAG609_02478 #e31a1c
+MAG610_00018 #238b45
+MAG610_00126 #238b45
+MAG610_00291 #238b45
+MAG610_00568 #238b45
+MAG610_00670 #238b45
+MAG610_00804 #238b45
+MAG610_00908 #238b45
+MAG610_00912 #238b45
+MAG610_00951 #238b45
+MAG610_00953 #238b45
+MAG610_01049 #238b45
+MAG610_01057 #238b45
+MAG610_01127 #238b45
+MAG610_01273 #238b45
+MAG610_01820 #238b45
+MAG610_02070 #238b45
+MAG610_02188 #238b45
+MAG610_02190 #238b45
+MAG610_02305 #238b45
+MAG610_02322 #238b45
+MAG610_02425 #238b45
+MAG610_02517 #238b45
+MAG610_02759 #238b45
+MAG611_00011 #74c476
+MAG611_00331 #74c476
+MAG611_00627 #74c476
+MAG611_00629 #74c476
+MAG611_00687 #74c476
+MAG611_01001 #74c476
+MAG611_01003 #74c476
+MAG611_01079 #74c476
+MAG611_01201 #74c476
+MAG611_01223 #74c476
+MAG611_01470 #74c476
+MAG611_01568 #74c476
+MAG611_01610 #74c476
+MAG611_01636 #74c476
+MAG611_01654 #74c476
+MAG611_01680 #74c476
+MAG611_02055 #74c476
+MAG611_02086 #74c476
+MAG612_00137 #d9f0a3
+MAG612_00142 #d9f0a3
+MAG612_00412 #d9f0a3
+MAG612_00417 #d9f0a3
+MAG612_00423 #d9f0a3
+MAG612_00680 #d9f0a3
+MAG612_00690 #d9f0a3
+MAG612_00857 #d9f0a3
+MAG612_00858 #d9f0a3
+MAG612_00863 #d9f0a3
+MAG612_01067 #d9f0a3
+MAG612_01324 #d9f0a3
+MAG612_01344 #d9f0a3
+MAG612_01700 #d9f0a3
+MAG612_01852 #d9f0a3
+MAG612_01926 #d9f0a3
+MAG612_01975 #d9f0a3
+MAG612_02015 #d9f0a3
+MAG612_02035 #d9f0a3
+MAG612_02071 #d9f0a3
+MAG612_02391 #d9f0a3
+MAG612_02392 #d9f0a3
+MAG612_02501 #d9f0a3
+MAG612_02525 #d9f0a3
+MAG612_02561 #d9f0a3
+MAG613_00407 #1f78b4
+MAG613_00413 #1f78b4
+MAG613_00415 #1f78b4
+MAG613_00458 #1f78b4
+MAG613_00480 #1f78b4
+MAG613_00810 #1f78b4
+MAG613_00843 #1f78b4
+MAG613_00864 #1f78b4
+MAG613_00880 #1f78b4
+MAG613_00895 #1f78b4
+MAG613_00902 #1f78b4
+MAG613_01030 #1f78b4
+MAG613_01176 #1f78b4
+MAG613_01482 #1f78b4
+MAG613_01615 #1f78b4
+MAG613_01915 #1f78b4
+MAG613_02000 #1f78b4
+MAG613_02012 #1f78b4
+MAG613_02156 #1f78b4
+MAG613_02293 #1f78b4
+PINT_00867 #636363
+PINT_01043 #636363
+PINT_01251 #636363
+PINT_01255 #636363
+PINT_01265 #636363
+PINT_01427 #636363
+PINT_01461 #636363
+PINT_01465 #636363
+PINT_01542 #636363
+PINT_01544 #636363
+PINT_01685 #636363
+PINT_01767 #636363
+PINT_01777 #636363
+PINT_01817 #636363
+PINT_01819 #636363
+PINT_01928 #636363
+PINT_01930 #636363
+PINT_01935 #636363
+PINT_02085 #636363
+PINT_02087 #636363
+PINT_02091 #636363
+PINT_02107 #636363
+PINT_02110 #636363
+PINT_02113 #636363
+PINT_02498 #636363
+PINT_02792 #636363
+PMUR_00211 #636363
+PMUR_00219 #636363
+PMUR_00223 #636363
+PMUR_00329 #636363
+PMUR_00333 #636363
+PMUR_01155 #636363
+PMUR_01261 #636363
+PMUR_01354 #636363
+PMUR_02430 #636363
+PMUR_02434 #636363
+PROD_00473 #636363
+PROD_00837 #636363
+PROD_00841 #636363
+PROD_01146 #636363
+PROD_01370 #636363
+PROD_01882 #636363
+PROD_02118 #636363
+PROD_02122 #636363
+PROD_02216 #636363
+PROD_02441 #636363
+PROD_02445 #636363
+PROD_02830 #636363

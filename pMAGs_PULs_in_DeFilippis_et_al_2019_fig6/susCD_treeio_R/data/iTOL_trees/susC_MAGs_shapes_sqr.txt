@@ -1,0 +1,235 @@
+DATASET_BINARY
+#Binary datasets are visualized as filled or empty symbols, depending on the value associated with a node (0 or 1).
+#Each node can have multiple associated values, and each value will be represented by a symbol (defined in FIELD_SHAPES) with corresponding color and label (from FIELD_COLORS and FIELD_LABELS).
+#Possible values (defined under DATA below) for each node are 1 (filled shapes), 0 (empty shapes) and -1 (completely omitted).
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,label1
+
+#dataset color (can be changed later)
+COLOR,#1a1a1a,#e31a1c,#fec44f
+
+#shapes for each field column; possible choices are
+#1: rectangle 
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: check mark
+FIELD_SHAPES,2,3,3
+
+#field labels
+FIELD_LABELS,Genomes-MAGs,PINT-MAG609,BACOVA
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#define colors for each individual field column (if not defined all symbols will use the main dataset color, defined in COLOR above)
+FIELD_COLORS,#1a1a1a,#e31a1c,#fec44f
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL,0
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN,0
+#align symbols to the end of each leaf label (individual dataset field will not be aligned to each other)
+#ALIGN_TO_LABELS,1
+
+#symbol height factor; Default symbol height will be slightly less than the available space between leaves, but you can set a multiplication factor here to increase/decrease it (values from 0 to 1 will decrease it, values above 1 will increase it)
+#HEIGHT_FACTOR,0.5
+
+#increase/decrease the spacing between individual levels, when there is more than one binary level defined 
+#SYMBOL_SPACING,5
+
+#display or hide the text labels above each field column
+#SHOW_LABELS,1
+
+#Example dataset with 4 columns (circle, left triangle, right triangle and rectangle):
+#FIELD_SHAPES,2,4,5,1
+#FIELD_LABELS,f1,f2,f3,f4
+#FIELD_COLORS,#ff0000,#00ff00,#ffff00,#0000ff
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+BACOVA_03426_XylL_SusC1,-1,-1,1
+BACOVA_03428_XylL_SusC2,-1,-1,1
+BACOVA_04393_XylS_SusC1,-1,-1,1
+MAG609_00226,-1,1,-1
+MAG609_00349,-1,1,-1
+MAG609_00419,-1,1,-1
+MAG609_00514,-1,1,-1
+MAG609_00635,-1,1,-1
+MAG609_00939,-1,1,-1
+MAG609_01012,-1,1,-1
+MAG609_01017,-1,1,-1
+MAG609_01224,-1,1,-1
+MAG609_01226,-1,1,-1
+MAG609_01284,-1,1,-1
+MAG609_01297,-1,1,-1
+MAG609_01299,-1,1,-1
+MAG609_01317,-1,1,-1
+MAG609_01324,-1,1,-1
+MAG609_01336,-1,1,-1
+MAG609_01583,-1,1,-1
+MAG609_01822,-1,1,-1
+MAG609_01858,-1,1,-1
+MAG609_01985,-1,1,-1
+MAG609_02114,-1,1,-1
+MAG609_02261,-1,1,-1
+MAG609_02293,-1,1,-1
+MAG609_02310,-1,1,-1
+MAG609_02478,-1,1,-1
+MAG610_00018,1,-1,-1
+MAG610_00126,1,-1,-1
+MAG610_00291,1,-1,-1
+MAG610_00568,1,-1,-1
+MAG610_00670,1,-1,-1
+MAG610_00804,1,-1,-1
+MAG610_00908,1,-1,-1
+MAG610_00912,1,-1,-1
+MAG610_00951,1,-1,-1
+MAG610_00953,1,-1,-1
+MAG610_01049,1,-1,-1
+MAG610_01057,1,-1,-1
+MAG610_01127,1,-1,-1
+MAG610_01273,1,-1,-1
+MAG610_01820,1,-1,-1
+MAG610_02070,1,-1,-1
+MAG610_02188,1,-1,-1
+MAG610_02190,1,-1,-1
+MAG610_02305,1,-1,-1
+MAG610_02322,1,-1,-1
+MAG610_02425,1,-1,-1
+MAG610_02517,1,-1,-1
+MAG610_02759,1,-1,-1
+MAG611_00011,1,-1,-1
+MAG611_00331,1,-1,-1
+MAG611_00627,1,-1,-1
+MAG611_00629,1,-1,-1
+MAG611_00687,1,-1,-1
+MAG611_01001,1,-1,-1
+MAG611_01003,1,-1,-1
+MAG611_01079,1,-1,-1
+MAG611_01201,1,-1,-1
+MAG611_01223,1,-1,-1
+MAG611_01470,1,-1,-1
+MAG611_01568,1,-1,-1
+MAG611_01610,1,-1,-1
+MAG611_01636,1,-1,-1
+MAG611_01654,1,-1,-1
+MAG611_01680,1,-1,-1
+MAG611_02055,1,-1,-1
+MAG611_02086,1,-1,-1
+MAG612_00137,1,-1,-1
+MAG612_00142,1,-1,-1
+MAG612_00412,1,-1,-1
+MAG612_00417,1,-1,-1
+MAG612_00423,1,-1,-1
+MAG612_00680,1,-1,-1
+MAG612_00690,1,-1,-1
+MAG612_00857,1,-1,-1
+MAG612_00858,1,-1,-1
+MAG612_00863,1,-1,-1
+MAG612_01067,1,-1,-1
+MAG612_01324,1,-1,-1
+MAG612_01344,1,-1,-1
+MAG612_01700,1,-1,-1
+MAG612_01852,1,-1,-1
+MAG612_01926,1,-1,-1
+MAG612_01975,1,-1,-1
+MAG612_02015,1,-1,-1
+MAG612_02035,1,-1,-1
+MAG612_02071,1,-1,-1
+MAG612_02391,1,-1,-1
+MAG612_02392,1,-1,-1
+MAG612_02501,1,-1,-1
+MAG612_02525,1,-1,-1
+MAG612_02561,1,-1,-1
+MAG613_00407,1,-1,-1
+MAG613_00413,1,-1,-1
+MAG613_00415,1,-1,-1
+MAG613_00458,1,-1,-1
+MAG613_00480,1,-1,-1
+MAG613_00810,1,-1,-1
+MAG613_00843,1,-1,-1
+MAG613_00864,1,-1,-1
+MAG613_00880,1,-1,-1
+MAG613_00895,1,-1,-1
+MAG613_00902,1,-1,-1
+MAG613_01030,1,-1,-1
+MAG613_01176,1,-1,-1
+MAG613_01482,1,-1,-1
+MAG613_01615,1,-1,-1
+MAG613_01915,1,-1,-1
+MAG613_02000,1,-1,-1
+MAG613_02012,1,-1,-1
+MAG613_02156,1,-1,-1
+MAG613_02293,1,-1,-1
+PINT_00867,-1,0,-1
+PINT_01043,-1,0,-1
+PINT_01251,-1,0,-1
+PINT_01255,-1,0,-1
+PINT_01265,-1,0,-1
+PINT_01427,-1,0,-1
+PINT_01461,-1,0,-1
+PINT_01465,-1,0,-1
+PINT_01542,-1,0,-1
+PINT_01544,-1,0,-1
+PINT_01685,-1,0,-1
+PINT_01767,-1,0,-1
+PINT_01777,-1,0,-1
+PINT_01817,-1,0,-1
+PINT_01819,-1,0,-1
+PINT_01928,-1,0,-1
+PINT_01930,-1,0,-1
+PINT_01935,-1,0,-1
+PINT_02085,-1,0,-1
+PINT_02087,-1,0,-1
+PINT_02091,-1,0,-1
+PINT_02107,-1,0,-1
+PINT_02110,-1,0,-1
+PINT_02113,-1,0,-1
+PINT_02498,-1,0,-1
+PINT_02792,-1,0,-1
+PMUR_00211,0,-1,-1
+PMUR_00219,0,-1,-1
+PMUR_00223,0,-1,-1
+PMUR_00329,0,-1,-1
+PMUR_00333,0,-1,-1
+PMUR_01155,0,-1,-1
+PMUR_01261,0,-1,-1
+PMUR_01354,0,-1,-1
+PMUR_02430,0,-1,-1
+PMUR_02434,0,-1,-1
+PROD_00473,0,-1,-1
+PROD_00837,0,-1,-1
+PROD_00841,0,-1,-1
+PROD_01146,0,-1,-1
+PROD_01370,0,-1,-1
+PROD_01882,0,-1,-1
+PROD_02118,0,-1,-1
+PROD_02122,0,-1,-1
+PROD_02216,0,-1,-1
+PROD_02441,0,-1,-1
+PROD_02445,0,-1,-1
+PROD_02830,0,-1,-1

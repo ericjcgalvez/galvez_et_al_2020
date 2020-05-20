@@ -1,0 +1,9 @@
+genome	pulid	contigid	start	end	pattern
+MAG614	PUL1	gnl|HZI|MAG614_1	32230	37171	susC-susD
+MAG614	PUL2	gnl|HZI|MAG614_16	11997	29735	GH2-GH20-unk-unk-unk-unk-GH29-unk-susC-susD
+MAG614	PUL3	gnl|HZI|MAG614_25	5615	26249	GT30-unk-unk-unk-susC-susD-unk-unk-susC-susD
+MAG614	PUL4	gnl|HZI|MAG614_45	11719	17425	susD-susC
+MAG614	PUL5	gnl|HZI|MAG614_47	221	20076	GH95-susC-susD-unk-unk-unk-unk-GH36
+MAG614	PUL6	gnl|HZI|MAG614_69	10398	14969	susD-susC
+MAG614	PUL7	gnl|HZI|MAG614_75	1457	6171	susC-susD
+MAG614	PUL8	gnl|HZI|MAG614_8	11141	31076	susC-unk-unk-susD-susC-unk-unk-CE10

@@ -1,0 +1,362 @@
+---
+title: "PULs_PMUR"
+author: "Eric J.C. Galvez"
+date: "12/9/2019"
+output: 
+  html_document: 
+    highlight: pygments
+    theme: flatly
+    code_download: true
+    graphics: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: inline
+---
+__Last modification:__ `r format(Sys.time(), '%d %B, %Y')`
+
+@EricJCGalvez
+
+<!-- more -->
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+# check.packages function: install and load multiple R packages.
+# Check to see if packages are installed. Install them if they are not, then load them into the R session.
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE, warn.conflicts = FALSE, quietly=TRUE)
+}
+
+# Usage example
+packages<-c("pcaExplorer", "tidyverse", "DESeq2", "dplyr", 
+            "ggthemes", "RColorBrewer", "knitr", "ggpubr", 
+            "gplots", "genefilter", "ComplexHeatmap", "circlize", 
+            "stringr", "here")
+
+check.packages(packages)
+```
+
+#### Set input file paths
+
+```{r}
+
+## RNAseq counts and genome annotation path
+############################################################
+
+strain <- c("PMUR")
+directory <- here("data/")
+straingff <- "../genome_refs/PMUR/PMUR_nofasta.gff"
+
+## PULs files
+############################################################
+
+puls_genes <- "../genome_refs/PMUR/PMUR.puls.tsv"
+subs <- "../genome_refs/pul_guilds.txt"
+
+### Assign experimental categories 
+############################################################
+control_con <- c("PMUR-invitro")
+exp_con1 <- c("PMUR-eSPF")
+exp_con2 <- c("PMUR-Conv")
+
+```
+
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+library(stringr, warn.conflicts = FALSE, quietly=TRUE)
+library(tidyverse, warn.conflicts = FALSE, quietly=TRUE)
+sampleFiles <- grep(strain, list.files(directory), value=TRUE)
+
+sampleCondition <- stringr::str_match(sampleFiles, "_(.*?).counts") %>%
+                    gsub("(r.)_", "",. )
+sampleCondition <- sampleCondition[,2]
+
+sampleTable <- data.frame(sampleName = sampleFiles,
+                          fileName = sampleFiles,
+                          condition = sampleCondition)
+```
+
+#### Loading Files and defining design = Unsupervised 1
+## Deseq2 normalization
+
+### Norm_var
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+ddsHTSeq <- DESeqDataSetFromHTSeqCount(sampleTable = sampleTable,
+                                       directory = directory,
+                                       design= ~ 1)
+ddsHTSeq
+dds <- estimateSizeFactors(ddsHTSeq)
+
+dds$condition<- relevel(dds$condition, ref = control_con)
+
+ddsFull <- DESeq(dds) 
+res <- results( ddsFull )
+
+boxplot(log10(assays(ddsFull)[["cooks"]]), range=0, las=2)
+
+```
+
+#### rlog transformation
+
+```{r}
+rld <- rlog( ddsFull )
+```
+
+
+## PCA analysis 
+```{r}
+pcaData <- plotPCA(rld, intgroup=c("condition"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+p <- ggplot(pcaData, aes(PC1, PC2, color=condition, shape=condition)) +
+  geom_point(size=6, alpha=0.7) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  scale_shape_manual(values = c(18 : 21)) + 
+  geom_vline(xintercept = 0, linetype="dashed", color = "black", size=0.2) +
+          geom_hline(yintercept = 0, linetype="dashed", color = "black", size=0.2)
+ p
+```
+
+
+############
+## PULs Expression
+############
+
+```{r}
+puls_genes <- read_delim(puls_genes, delim = "\t")
+subs <- read_delim(subs, delim = "\t")
+
+```
+
+
+####
+## PULs guilds heatmap
+####
+
+
+```{r, fig.height=8, fig.width=6}
+set.seed(123)
+
+col_fun = circlize::colorRamp2(c(-5, 2, 15), c("#4575b4", "white", "#d73027"))
+
+puls_genes_sep <- puls_genes %>% separate(hmm, c("Cazy_Fam","sub_fam"), sep = "([\\_\\;])", remove = F)
+
+
+premat <- as.data.frame(assay(rld)[puls_genes_sep$protein_id,])
+type <- sampleCondition
+ha = HeatmapAnnotation(df = data.frame(type = sampleCondition), name = "Experiment")
+
+levels(factor(puls_genes_sep$pulid))
+
+# relevel the factors of the PULs ids
+puls_genes_sep$pulid <- factor(puls_genes_sep$pulid, levels = c(
+                                 levels(factor(puls_genes_sep$pulid))[
+                                   order(as.numeric(gsub("PUL", "", levels(factor(puls_genes_sep$pulid)))))
+                                   ]
+                               ))
+
+puls_genes_sep$pul_subs <- as.character(subs$Substrate[match(puls_genes_sep$Cazy_Fam, subs$Cazy)])
+
+type <- factor(type, levels = c("PMUR-invitro", "PMUR-eSPF", "PMUR-Conv"))
+
+## Scale the matrix using Z score
+mat <- pheatmap:::scale_rows(premat)
+
+## Setting the colors the colors
+col_fun = circlize::colorRamp2(c(-2, 0, 2), c("#253494", "#f7f7f7", "#e31a1c"))
+
+ch_plot <- ComplexHeatmap::Heatmap(mat, name = "expression", top_annotation = ha, column_split =  type, col = col_fun,
+                        split = puls_genes_sep$pulid, cluster_rows = FALSE, 
+                        show_row_names = FALSE, show_column_names = FALSE, border = TRUE, 
+                        show_parent_dend_line = FALSE,
+                        row_title_rot = 0, row_gap = unit(1, "mm"), row_title_gp = gpar(fontsize = 8)) +
+  Heatmap(puls_genes_sep$strand, name = "Strand", width = unit(2, "mm"),
+          col = c("+" = "#fde0ef", "-" = "#bababa")) +
+  Heatmap(puls_genes_sep$sus, name = "Sus", width = unit(5, "mm"),
+          col = c("susC" = "#6a51a3", "susD" = "#fd8d3c", "NA"="white")) +
+  Heatmap(puls_genes_sep$pul_subs, name = "Guild", width = unit(3, "mm"),
+          col = c("Xylans" = "#b3de69", "Pectin" = "#bc80bd", "N/O-glycans" = "#fb8072", 
+                  "Starch" = "#fee090", "Sucrose/Fructans" = "#fdb462")) +
+  rowAnnotation(link = anno_mark(at = which(!is.na(puls_genes_sep$pul_subs)), 
+        labels = puls_genes_sep$pul_subs[ which(!is.na(puls_genes_sep$pul_subs))], 
+        labels_gp = gpar(fontsize = 8), padding = 0.5)) 
+
+ch_plot
+```
+
+
+
+```{}
+##To save the heatmap()
+
+set.seed(123)
+pdf("./PMUR_heatmap_PULs.pdf", width =8 , height = 12)
+ComplexHeatmap::Heatmap(mat, name = "expression", top_annotation = ha, column_split =  type, col = col_fun,
+                        split = puls_genes_sep$pulid, cluster_rows = FALSE, 
+                        show_row_names = FALSE, show_column_names = FALSE, border = TRUE, 
+                        show_parent_dend_line = FALSE,
+                        row_title_rot = 0, row_gap = unit(1, "mm"), row_title_gp = gpar(fontsize = 10)) +
+  Heatmap(puls_genes_sep$strand, name = "Strand", width = unit(2, "mm"),
+          col = c("+" = "#fde0ef", "-" = "#bababa")) +
+  Heatmap(puls_genes_sep$sus, name = "Sus", width = unit(5, "mm"),
+          col = c("susC" = "#6a51a3", "susD" = "#fd8d3c", "NA"="white")) +
+  Heatmap(puls_genes_sep$pul_subs, name = "Guild", width = unit(3, "mm"),
+          col = c("Xylans" = "#b3de69", "Pectin" = "#bc80bd", "N/O-glycans" = "#fb8072", 
+                  "Starch" = "#fee090", "Sucrose/Fructans" = "#fdb462")) +
+  rowAnnotation(link = anno_mark(at = which(!is.na(puls_genes_sep$pul_subs)), 
+        labels = puls_genes_sep$pul_subs[ which(!is.na(puls_genes_sep$pul_subs))], 
+        labels_gp = gpar(fontsize = 10), padding = 0.5)) 
+dev.off()
+```
+
+
+##### formating PULs and SusCD and GHs names 
+##### to align them with dummies function (gggenes)
+
+```{r}
+puls_genes_sep
+
+puls_genes_sep[!duplicated(puls_genes_sep[,c("pulid","sus")],fromLast=FALSE),]
+
+df_first_sus <- puls_genes_sep[!duplicated(puls_genes_sep[,c("pulid","sus")],fromLast=FALSE),] %>%
+                mutate(., first_sus = ifelse(puls_genes_sep[!duplicated(puls_genes_sep[, 
+                                         c("pulid","sus")], fromLast=FALSE),]$sus== "susC", "susC_1", "none")
+)
+
+puls_genes_sep$sus <- ifelse(puls_genes_sep$protein_id %in% (filter(df_first_sus, first_sus =="susC_1") %>% select(protein_id) %>% pull()), "susC_1", puls_genes_sep[["sus"]])
+
+puls_genes_sep$sus <- ifelse(is.na(puls_genes_sep$sus), puls_genes_sep[["Cazy_Fam"]], puls_genes_sep[["sus"]])
+
+puls_genes_sep$sus <- ifelse(is.na(puls_genes_sep$sus), "none", puls_genes_sep[["sus"]])
+
+puls_genes_sep$direction <- ifelse(puls_genes_sep$strand == "+", 1, -1)
+puls_genes_sep$new_labels <- gsub('[0-9]+', '', puls_genes_sep$sus) %>%
+                             gsub('_', '', .)
+
+```
+
+## PULs and transcription plot
+
+#### PULs plot
+
+```{r}
+library("gggenes")
+
+## Gernerates the geom_blank centring
+
+dummies <- make_alignment_dummies(
+  puls_genes_sep,
+  aes(xmin = start, xmax = end, y = pulid, id = new_labels),
+  on = "susC"
+)
+
+PULs_col <- c("susC" = "#6a51a3",
+                     "susD" = "#fd8d3c",
+                     "GH" = "#41ab5d", 
+                     "GT" = "#6baed6",
+                     "CE" = "#bf812d",
+                     "PL" = "#f4a582", 
+                     "none" = "#e0e0e0"  
+                     )
+
+pmur1 <- ggplot(puls_genes_sep,
+    aes(xmin = start, xmax = end, y = pulid, fill = new_labels, label = new_labels) #forward = direction
+  ) +
+  geom_gene_arrow(arrow_body_height = grid::unit(6, "mm"), arrowhead_height = unit(3, "mm"), 
+                  arrowhead_width = unit(0.1, "mm")) +
+  geom_gene_label(align = "centre") +
+  facet_wrap(~ pulid, scales = "free", ncol = 1) +
+  geom_blank(data = dummies) +
+  scale_fill_manual(values = PULs_col, breaks=c("susC", "susD", "GH", "GT", "CE", "PL", "none")) +
+  theme_genes() +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line.x = element_blank()
+        )
+```
+
+
+## PULs integration with RNAseq
+
+```{r}
+require(magrittr)
+
+pul_counts_rld <- as.data.frame(assay(rld)[puls_genes_sep$protein_id,]) 
+
+
+gene_ids <- puls_genes_sep %>%
+  #dplyr::filter(., new_labels == c("susC", "susD") ) %>%
+  dplyr::select(protein_name, pulid)
+
+pul_counts_tbl <- tibble::rownames_to_column(pul_counts_rld, var ="protein_name") 
+
+pul_counts_tidy <- pul_counts_tbl %>%
+dplyr::filter(., pul_counts_tbl$protein_name %in% gene_ids$protein_name) %>%
+  reshape2::melt()
+
+conditions <-  stringr::str_match(pul_counts_tidy$variable, "_(.*?).counts") %>%
+                    gsub("(r.)_", "", ., ) %>%
+                    as.data.frame() %>%
+                    dplyr::select(2) 
+
+
+PUL_sums_dt <- pul_counts_tidy %>% 
+  dplyr::mutate(., "condition" = conditions$V2) %>%
+  dplyr::mutate(., "pulid"= ifelse(.$protein_name %in% gene_ids$protein_name, 
+                                   as.vector(gene_ids$pulid), "NA")) %>%
+  dplyr::select(., 1,4,5,3) %>%
+  dplyr::group_by(condition, pulid) %>%
+  dplyr::summarize(mean_exp=sum(value)) %>%   ## it sums the expresion of the PUL proteins
+  tidyr::spread(condition, mean_exp) %>%
+  dplyr::select(., 1,4,3,2)
+
+
+PUL_sums_dt_rowscaled <- PUL_sums_dt %>%
+  select(2,3,4) %>%
+  pheatmap:::scale_rows() %>%
+  mutate(pulid = PUL_sums_dt$pulid) %>%
+  select(4,1,2,3) %>%
+  reshape2::melt(value.name = "mean_exp")
+
+PUL_sums_dt_rowscaled$pulid <- factor(PUL_sums_dt_rowscaled$pulid, levels(puls_genes_sep$pulid))
+
+
+```
+
+## PUL mean expression plot
+
+```{r}
+pmur2 <- ggplot(PUL_sums_dt_rowscaled, aes(x= variable, y = pulid)) +
+  geom_tile(aes(fill=mean_exp, color="black",  width=0.8, height=0.8), size=.5) +
+  facet_wrap(~PUL_sums_dt_rowscaled$pulid, ncol=1, scales = "free") +
+  scale_fill_gradient2(midpoint = 0, low="#253494", high="#e31a1c", mid = "#f7f7f7") +
+  scale_color_grey() +
+  scale_y_discrete(expand = c(0.1, 0.1)) +
+  scale_x_discrete(expand = c(0.1, 0.1)) +
+  theme_genes() +
+  theme(legend.position="left",
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.line.x=element_blank()
+        )
+
+```
+
+## PULs plot integration
+
+```{r, fig.height=4, fig.width=12}
+pmur <- egg::ggarrange(plots = list(pmur2, pmur1), nrow = 1, widths = c(0.5, 10))
+
+# 4 x 12
+
+g5 <- ggplot2::ggplotGrob(pmur2)
+g6 <- ggplot2::ggplotGrob(pmur1)
+
+```
+

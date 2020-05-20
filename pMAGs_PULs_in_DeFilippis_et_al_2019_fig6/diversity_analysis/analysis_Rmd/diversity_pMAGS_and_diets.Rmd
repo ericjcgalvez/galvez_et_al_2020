@@ -1,0 +1,542 @@
+---
+title: "Diversity analysis of P. copri MAGs in distinct dietary habits"
+author: "Eric J.C. Galvez"
+date: "9/6/2019"
+output: 
+  html_document: 
+    highlight: pygments
+    theme: flatly
+    code_download: true
+    graphics: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: inline
+---
+__Last modification:__ `r format(Sys.time(), '%d %B, %Y')`
+
+@EricJCGalvez
+
+<!-- more -->
+
+
+**The data re-analized in this section has been previoulsy published in :**
+
+De Filippis, F., Pasolli, E., Tett, A., Tarallo, S., Naccarati, A., De Angelis, M., Neviani, E., Cocolin, L., Gobbetti, M., Segata, N., et al. (2019). Distinct Genetic and Functional Traits of Human Intestinal Prevotella copri Strains Are Associated with Different Habitual Diets. Cell Host Microbe 25, 444-453.e3.
+
+```{r}
+  library("data.table")
+  library("maptools")
+  library("ggalt")
+  library("ggthemes")
+  library("tibble")
+  library("viridis")
+  library("maps")
+  library("phyloseq")
+  library("here")
+  library("MIKIbiomeR")
+
+```
+
+## Data Load
+
+```{r}
+MAGs_table <- as_tibble(fread("../data/median_coverage_genomes.tsv", sep = "\t", header = T)) 
+MAGs_table$V1 <- gsub(x = MAGs_table$V1, pattern = "-interlev", replacement = "")
+
+MAGs_tax <- as_tibble(fread("../data/taxonomy.tsv", sep = "\t", header = T))
+mapp_file <-  as_tibble(fread("../data/Filippis_et_al_data_metadata.tsv"))
+
+tree_data <- phyloseq::phy_tree(phyloseq::import_qiime(treefilename = "../data/tree.nwk")) 
+
+library(dplyr)
+
+dplyr::rename(dplyr::count(mapp_file, Location), Freq = n)
+dplyr::rename(dplyr::count(mapp_file, Diet), Freq = n)
+
+```
+
+
+## Italy map
+```{r, fig.width=6, fig.height=6}
+## modified from Bob Rudis
+## https://stat.ethz.ch/pipermail/r-help/2016-June/439123.html
+
+# get italy region map
+  italy_map <- map_data("italy")
+
+  # your data will need to have these region names
+  print(unique(italy_map$region))
+
+  # we'll simulate some data for this
+  set.seed(1492)
+  #choro_dat <- data_frame(region=unique(italy_map$region),
+                          #value=sample(100, length(region)))
+  
+select_reg <- data.frame(region=c("Bari", "Bologna", "Parma", "Torino"), 
+                            number = c(16, 5, 18, 62) )
+  
+  gg <- ggplot()
+
+  # lay down the base layer
+  gg <- gg + geom_map(data=italy_map, map=italy_map,
+                      aes(long, lat, map_id=region),
+                      color="#b2b2b2", size=0.1, fill="#252525")
+
+  # fill in the regions with the data
+  gg <- gg + geom_map(data=select_reg, map=italy_map,
+                      aes(fill=as.character(number), map_id=region),
+                      color="#b2b2b2", size=0.1)
+
+  # great color palette (use a better legend title)
+  gg <- gg + scale_fill_gdocs("Donors #")
+
+  # decent map projection for italy choropleth
+  #gg <- gg + coord_proj(italy_proj)
+
+  # good base theme for most maps
+  gg <- gg + theme_map()
+
+  # move the legend
+  gg <- gg #+ theme(legend.position=c(0.95, 0.3))
+
+  gg 
+
+```
+
+## Prepare metagenomic data outputs from ATLAS to phyloseq
+```{r}
+mags_matrix <- t(data.matrix(MAGs_table[,2:ncol(MAGs_table)]))
+colnames(mags_matrix) <- MAGs_table$V1
+
+otumags <- otu_table(mags_matrix, taxa_are_rows = T)
+
+
+tax_matrix <- as.matrix(MAGs_tax[,3:ncol(MAGs_tax)])
+row.names(tax_matrix) <- MAGs_tax$`# bin`
+
+taxmags <- tax_table(tax_matrix)
+
+samplemags <- sample_data(mapp_file)
+row.names(samplemags) <- mapp_file$SampleID
+
+```
+
+## Create phyloseq object
+```{r}
+phylo <- phyloseq(otumags, taxmags, samplemags, tree_data)
+phy_tree(phylo) <-  ape::root(phy_tree(phylo), sample(taxa_names(phylo), 1), resolve.root = T)
+
+
+colnames(tax_table(phylo)) <- c("Phylum", "Class", "Order", "Family", "Genus", "Species")
+
+#otu_table(phylo)[otu_table(phylo)<10] <- 0
+
+```
+
+
+## alpha diversity by Diet
+```{r,  fig.show = "hold", out.width = "50%", warning=FALSE}
+# min_count in this case is 10X coverage
+phylo <- alpha_div_calc(phylo =  phylo, min_count = 10)
+
+alpha_div_plots(phylo, x_axis = "Diet", color_var = "Diet")
+
+``` 
+
+```{r}
+## Transform to (%) relative abundace
+
+phylo_R <- MIKIbiomeR::calc_rel_abund(phylo)
+```
+
+## PCoA and NMDS composition by Diet and Location 
+
+```{r}
+## NMDS
+MIKIbiomeR::beta_ordination(phylo_R, ordination_type = "NMDS",  
+                            color = "Diet", tagtype = NULL,
+                            formula = c("Diet + Location + SRA_Study"))
+
+## NMDS
+MIKIbiomeR::beta_ordination(phylo_R, ordination_type = "NMDS",  
+                            color = "Location", 
+                            geom_star = F,   
+                            formula = "")
+
+## PCoA
+
+MIKIbiomeR::beta_ordination(phylo_R, ordination_type = "PCoA",  
+                            color = "Location", shape = "Diet",
+                            geom_star = F,   
+                            formula = "")
+
+```
+
+## Barplot (absolute coverage), facet by Diet
+### Phylum and Family
+
+```{r, fig.height= 6, fig.width= 10}
+
+MIKIbiomeR::abundance_plot(phylo, "SampleID", taxlev = "Order", facetby = "Diet", ntaxa = 12, 
+                           orderbar = "BF_ratio" ) +
+  theme(axis.text.x=element_blank())
+
+MIKIbiomeR::abundance_plot(phylo, "SampleID", taxlev = "Family", facetby = "Diet", ntaxa = 12,
+                           orderbar = "BF_ratio" ) +
+  theme(axis.text.x=element_blank())
+```
+
+## Barplot relative abundance (%), facet by Diet
+#### Phylum and Family
+
+```{r, fig.height= 6, fig.width= 10}
+
+MIKIbiomeR::abundance_plot(phylo_R, "SampleID", taxlev = "Phylum", facetby = "Diet", ntaxa = 12, 
+                           orderbar = "BF_ratio" ) +
+    theme(axis.text.x=element_blank())
+
+MIKIbiomeR::abundance_plot(phylo_R, "SampleID", taxlev = "Family", facetby = "Diet", ntaxa = 12, 
+                           orderbar = "BF_ratio" ) +
+    theme(axis.text.x=element_blank())
+
+```
+
+
+## Abundance of Prevotellaceae MAGs by diet
+#### Total recontructed MAGs 34
+
+#### Subseting  Prevotellaceae MAGs and arrenged by abundance
+```{r, fig.height= 6, fig.width= 10}
+
+phylo_prevo <- subset_taxa(physeq = phylo_R, Family == "Prevotellaceae")
+
+
+mydata_rel_glom_aver.psq <- prune_taxa(names(sort(taxa_sums(phylo_prevo), T))[1:35], phylo_prevo)
+mydata_rel_average.melt <- psmelt(mydata_rel_glom_aver.psq)
+
+p <- ggplot(mydata_rel_average.melt[order(mydata_rel_average.melt$Order, decreasing = T),], aes(reorder(Sample, Abundance), y=Abundance, fill=OTU))
+p <- p + geom_bar(stat="identity")
+p + theme(axis.text.x = element_text(angle = 45, hjust = 0.9)) + ylab("MAGs mean coverage (%)") +
+  facet_wrap(~Diet,  scales = "free_x",  labeller = label_wrap_gen(multi_line=FALSE)) + 
+  #scale_fill_brewer(palette = "Paired") + xlab("Donor#") + 
+  theme(axis.text.x = element_blank()) +
+  ggplot2::scale_fill_manual(values = ggpubr::get_palette(palette = "simpsons", 
+        k = 34)) +
+  xlab("Donor_Id") + 
+    ggplot2::scale_y_continuous(limits = c(0, 80), expand=ggplot2::expand_scale(mult = 0.001, add =0)) + 
+    ggplot2::scale_x_discrete(expand=c(0.05, 0)) +
+        #  ylim(0,70) +
+    theme(axis.text.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank())
+
+
+```
+
+## P. copri MAGs: 
+#### MAG609 is highly abundant and predominates in Vegans 
+
+```{r, fig.height= 6, fig.width= 10}
+
+pcopri <- c("MAG609",
+          "MAG610",
+          "MAG611",
+          "MAG612",
+          "MAG613")
+
+pcopri_col <- c("MAG609" ="#e31a1c",
+          "MAG610"="#238b45",
+          "MAG611"="#74c476",
+          "MAG612"="#d9f0a3",
+          "MAG613"="#1f78b4")
+
+phylo_prevo <- subset_taxa(physeq = phylo_R, phyloseq::taxa_names(phylo_R) %in% pcopri)
+
+mydata_rel_glom_aver.psq <- prune_taxa(names(sort(taxa_sums(phylo_prevo), T))[1:12], phylo_prevo)
+mydata_rel_average.melt <- psmelt(mydata_rel_glom_aver.psq)
+
+mydata_rel_average.melt$Diet <- factor(mydata_rel_average.melt$Diet, 
+                                       levels = c("Omnivore", "Vegetarian", "Vegan"))
+
+p <- ggplot(mydata_rel_average.melt[order(mydata_rel_average.melt$Order, decreasing = T),], aes(reorder(Sample, Abundance), y=Abundance, fill=OTU))
+p <- p + geom_bar(stat="identity")
+pf <- p + theme(axis.text.x = element_text(angle = 45, hjust = 0.9)) + ylab("MAGs mean coverage (%)") +
+  facet_wrap(~Diet,  scales = "free_x", ncol = 4, labeller = label_wrap_gen(multi_line=FALSE)) + 
+    scale_fill_manual(values = pcopri_col) + xlab("Donor_Id") + 
+    ggplot2::scale_y_continuous(limits = c(0, 80), expand=ggplot2::expand_scale(mult = 0.001, add =0)) + 
+    ggplot2::scale_x_discrete(expand=c(0.05, 0)) +
+        #  ylim(0,70) +
+    theme(axis.text.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank())
+
+pf
+
+#export 5x7
+
+```
+
+
+##################################################################
+##  PULs diagram
+####################################################################
+
+
+```{r}
+library("data.table")
+library("purrr")
+
+tbl_fread <- 
+    list.files(path = "../data/predicted_PULs_in_pMAGs/", full.names = T, pattern = "*.puls.tsv") %>% 
+    map_df(~fread(.))
+
+
+puls_genes_sep <- tbl_fread %>% tidyr::separate(hmm, c("Cazy_Fam","sub_fam"), sep = "([\\_\\;])", remove = F)
+
+
+## check for duplicates (forr ggenes can not be aligned with duplicate names)
+#  puls_genes_sep[!duplicated(puls_genes_sep[,c("pulid","sus")],fromLast=FALSE),]
+
+## add a number to susC that is the aligning gene in this case and create a new column
+df_first_sus <- puls_genes_sep[!duplicated(puls_genes_sep[,c("pulid","sus")],fromLast=FALSE),] %>%
+                mutate(., first_sus = ifelse(puls_genes_sep[!duplicated(puls_genes_sep[, 
+                                         c("pulid","sus")], fromLast=FALSE),]$sus== "susC", "susC_1",
+                                         "none")
+                       )
+
+#Edit and combine Cazymes and Sus genes
+puls_genes_sep$sus <- ifelse(puls_genes_sep$protein_id %in% (filter(df_first_sus, first_sus =="susC_1") %>%                     select(protein_id) %>% pull()), "susC_1", puls_genes_sep[["sus"]])
+## combining step
+puls_genes_sep$sus <- ifelse(puls_genes_sep$sus=="", puls_genes_sep[["Cazy_Fam"]],
+                             puls_genes_sep[["sus"]])
+
+puls_genes_sep$sus <- ifelse(puls_genes_sep$sus=="", "unk", puls_genes_sep[["sus"]])
+#convering the strands to numeric -> ideally for arrows direction, WIP
+puls_genes_sep$direction <- ifelse(puls_genes_sep$strand == "+", 1, -1)
+puls_genes_sep$new_labels <- gsub('[0-9]+', '', puls_genes_sep$sus) %>%
+                             gsub('_', '', .)
+
+puls_genes_sep
+
+```
+
+
+## filtering trSusCD Genes from p.copri MAGs
+```{r}
+trPUL_puls_sep <- puls_genes_sep %>%
+    dplyr::filter(., genome == "MAG609" & pulid == c("PUL4") |
+                     genome == "MAG609" & pulid == c("PUL6") |
+                     genome == "MAG610" & pulid == c("PUL10") |
+                     genome == "MAG611" & pulid == c("PUL2") |
+                     genome == "MAG611" & pulid == c("PUL4")
+                     ) %>%
+  tidyr::unite("pulid_unq", genome:pulid, sep="_", remove=F)
+
+
+```
+
+
+#### PULs plot
+
+```{r, fig.height= 6, fig.width= 10}
+library(gggenes)
+
+PULs_col <- c("susC" = "#6a51a3",
+              "susD" = "#fd8d3c",
+              "GH2" = "#e0f3db", 
+              "GH5" = "#ccebc5",
+              "GH10" = "#a8ddb5",
+              "GH13" = "#7bccc4",
+              "GH43" = "#4eb3d3",
+              "GH97" = "#2b8cbe",
+              "GH105" = "#0868ac",
+              "PL11" = "#f4a582", 
+              "unk" = "#e0e0e0"  
+              )
+     
+factor(trPUL_puls_sep$sus)
+
+
+ggplot(
+  trPUL_puls_sep,
+  aes(xmin = start, xmax = end, y = pulid_unq, fill = sus, forward = direction, label = sus)) +
+  geom_gene_arrow(arrow_body_height = grid::unit(4, "mm"), arrowhead_height = unit(4, "mm"), 
+                  arrowhead_width = unit(2, "mm")) +
+  geom_gene_label(align = "centre") +
+  facet_wrap(~ pulid_unq, scales = "free", ncol = 1) +
+  scale_fill_manual(values = PULs_col, breaks=c("susC", "susD", "GH2", "GH5", "GH10", "GH13", 
+                                                "GH43", "GH97", "GH105", "PL11", "unk")) +
+  ylab("") +
+  xlab("Locus length (bp)") +
+  theme_genes()
+```
+
+## trSusCD PULs in P. copri (+) vs (-)
+#### filter Prevotellaceae MAGs abundance > 0.1 %
+
+## filter Prevotella abundance > 0.1 %
+
+```{r}
+trPUL <- c("MAG609", "MAG610", "MAG611") 
+
+puls_data <- mydata_rel_average.melt %>%
+  dplyr::mutate(., PUL = ifelse(OTU %in% trPUL, "trPUL(+)", "trPUL(-)")) %>%
+  filter(., Abundance > 0.1)
+```
+
+
+```{r}
+  ## summarizing and getting the mean abundance by trPUL
+  sum_melted_abund <- puls_data %>% 
+                 dplyr::group_by(Sample, Diet, PUL) %>%
+                 dplyr::summarise(sum_Abundance = sum(Abundance))
+
+
+p <- sum_melted_abund %>%
+  ggplot(., aes(x = PUL, y = sum_Abundance), color = Sample) + 
+  geom_boxplot() +
+  geom_jitter(aes(alpha=0.7), width = 0.25)
+p <- p + theme(axis.text.x = element_text(angle = 45, hjust = 0.9)) + ylab("MAGs mean coverage (%)") +
+    facet_wrap(~Diet,  scales = "free_x", ncol = 4, labeller = label_wrap_gen(multi_line=FALSE)) + 
+    #scale_color_manual(values = pcopri_col) + xlab("Donor_Id") + 
+    # ggplot2::scale_y_continuous(limits = c(0, 80), expand=ggplot2::expand_scale(mult = 0.001, add =0)) + 
+   # ggplot2::scale_x_discrete(expand=c(0.05, 0)) +
+        #  ylim(0,70) +
+    theme(panel.grid.major.y = element_blank(),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank())
+
+
+my_comp <- list(c("trPUL(+)", "trPUL(-)"))
+p + ggpubr::stat_compare_means(comparisons = my_comp, method = "t.test") 
+
+```
+
+##### Calculate standard error of the mean
+```{r}
+
+###################function of summary SE
+############# http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)
+
+library("plyr")
+
+summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
+                      conf.interval=.95, .drop=TRUE) {
+  
+  # New version of length which can handle NA's: if na.rm==T, don't count them
+  length2 <- function (x, na.rm=FALSE) {
+    if (na.rm) sum(!is.na(x))
+    else       length(x)
+  }
+  
+  # This does the summary. For each group's data frame, return a vector with
+  # N, mean, and sd
+  datac <- ddply(data, groupvars, .drop=.drop,
+                 .fun = function(xx, col) {
+                   c(N    = length2(xx[[col]], na.rm=na.rm),
+                     mean = mean   (xx[[col]], na.rm=na.rm),
+                     sd   = sd     (xx[[col]], na.rm=na.rm)
+                   )
+                 },
+                 measurevar
+  )
+  
+  # Rename the "mean" column    
+  datac <- plyr::rename(datac, c("mean" = measurevar))
+  
+  datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
+  
+  # Confidence interval multiplier for standard error
+  # Calculate t-statistic for confidence interval: 
+  # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
+  ciMult <- qt(conf.interval/2 + .5, datac$N-1)
+  datac$ci <- datac$se * ciMult
+
+  return(datac)
+}
+
+```
+
+
+## Barplot with SE
+
+```{r}
+
+my_cols_pal <-c("trPUL(+)" = "#525252", "trPUL(-)" ="#f0f0f0") 
+
+pul_stats <- summarySE(data = sum_melted_abund, measurevar = "sum_Abundance",
+          groupvars=c("Diet", "PUL"),
+          na.rm=T, conf.interval=.95, .drop=TRUE)
+
+p <- ggplot(pul_stats, aes(x=PUL, y=sum_Abundance,  fill=PUL)) + 
+      geom_col(position = position_dodge(1), colour="black") +
+      facet_grid(~Diet) +
+      ggplot2::geom_errorbar(ggplot2::aes(ymin=sum_Abundance - se,
+                                          ymax=sum_Abundance + se),
+                                          width=.3, alpha=.7, position = position_dodge(0.8)) +
+      scale_fill_manual(values = my_cols_pal) + 
+      scale_color_manual(values = "black") + 
+      theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 20),
+                  legend.text=element_text(size = 18),
+                  strip.text.x =(element_text(size = 20)),
+                  axis.text.y =(element_text(size = 20))) +
+      ylab("MAGs mean coverage (%)") +
+      xlab("") +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 20),
+                  strip.text.x =(element_text(size = 20)),
+                  axis.text.y =(element_text(size = 20))) +
+                  ggplot2::scale_y_continuous(limits = c(0, 25), 
+                                              expand=ggplot2::expand_scale(mult = 0.001, add =0)) 
+
+            
+p + theme_base() + theme(axis.text.x = element_text(angle = 45, hjust = 0.9),
+         panel.grid.major.y = element_blank(),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank())
+
+```
+
+
+## P. copri MAGS abundance and diet associations
+##### filter Prevotellaceae MAGs abundance > 0.1 %
+
+```{r}
+puls_data <- mydata_rel_average.melt %>%
+  filter(., Abundance > 0.1)
+```
+
+
+#### stats PULs
+```{r, fig.height= 6, fig.width= 8}
+p <- ggplot(puls_data, aes(x = Diet, y = Abundance), color = OTU)
+p <- p + geom_boxplot() + geom_jitter(aes(color=OTU, alpha=0.5), width = 0.25)
+pf <- p + ylab("MAGs mean coverage (%)") +
+    facet_wrap(~OTU,  scales = "free", ncol =3, labeller = label_wrap_gen(multi_line=FALSE)) + 
+    scale_color_manual(values = pcopri_col) + 
+    scale_x_discrete(limit = c("Omnivore", "Vegetarian", "Vegan"),
+                             labels = c("O", "V", "VG")) +
+    ggplot2::scale_y_continuous(limits = c(0, NA), expand=ggplot2::expand_scale(mult = 0.1, add =0.5)) + 
+   # ggplot2::scale_x_discrete(expand=c(0.05, 0)) +
+        #  ylim(0,70) +
+    theme(panel.grid.major.y = element_blank(),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank())
+
+
+#my_comp <- list(c("MAG609","MAG610"), c("MAG609","MAG611"), c("MAG609","MAG612"), c("MAG609","MAG613"))
+my_comp <- list(c("Omnivore","Vegetarian"), c("Vegetarian", "Vegan"), c("Omnivore","Vegan"))
+
+pf + ggpubr::stat_compare_means(comparisons = my_comp, label = "p.signif", method = "wilcox.test") 
+
+  pf + ggpubr::stat_compare_means(comparisons = my_comp, method = "wilcox.test") 
+
+#save as 6x5
+
+```

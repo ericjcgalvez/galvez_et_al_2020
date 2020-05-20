@@ -1,0 +1,3 @@
+genome	pulid	protein_id	contig	start	end	strand	dist	protein_name	sus	hmm	active
+MAG600	PUL1	MAG600_01002	gnl|HZI|MAG600_25	5395	6867	-	0	MAG600_01002	susD		
+MAG600	PUL1	MAG600_01003	gnl|HZI|MAG600_25	6904	10089	-	37	MAG600_01003	susC		

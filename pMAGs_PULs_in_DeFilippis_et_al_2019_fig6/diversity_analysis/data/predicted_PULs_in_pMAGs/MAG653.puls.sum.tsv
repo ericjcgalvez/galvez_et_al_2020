@@ -1,0 +1,17 @@
+genome	pulid	contigid	start	end	pattern
+MAG653	PUL1	gnl|HZI|MAG653_1	54614	67445	susD-susC-unk-unk-unk-unk-GT2_Glycos_transf_2-GT2_Glycos_transf_2
+MAG653	PUL2	gnl|HZI|MAG653_1	90082	101608	susC-unk-unk-susD-susC
+MAG653	PUL3	gnl|HZI|MAG653_1	110660	153668	GH3-unk-unk-unk-susC-unk-unk-susD-susC-unk-unk-GH92-GH95-unk-GH2;CBM32-unk-GH36-GH36
+MAG653	PUL4	gnl|HZI|MAG653_1	167432	172372	susC-susD
+MAG653	PUL5	gnl|HZI|MAG653_10	24621	34101	GH25-unk-unk-unk-susC-susD
+MAG653	PUL6	gnl|HZI|MAG653_2	68261	87184	susC-unk-unk-susD-susC-unk-GH67-GH43_1-GH10
+MAG653	PUL7	gnl|HZI|MAG653_22	11383	49234	GH43_12-GH43_29;CBM6-unk-susC-susD-unk-unk-susC-susD-unk-unk-GH5_21;GH43_10-unk-unk-susC
+MAG653	PUL8	gnl|HZI|MAG653_26	49142	54008	susC-susD
+MAG653	PUL9	gnl|HZI|MAG653_27	31279	45511	susC-susD-unk-unk-unk-susD
+MAG653	PUL10	gnl|HZI|MAG653_29	12755	32433	susC-susD-unk-unk-susC-unk-unk-unk-unk-GH23
+MAG653	PUL11	gnl|HZI|MAG653_32	16055	37847	GH43_24-GH43_24-unk-unk-unk-susC-susD-unk-unk-susC-susD
+MAG653	PUL12	gnl|HZI|MAG653_43	13190	17809	susD-susC
+MAG653	PUL13	gnl|HZI|MAG653_48	13459	18212	susD-susC
+MAG653	PUL14	gnl|HZI|MAG653_5	96441	101186	susD-susC
+MAG653	PUL15	gnl|HZI|MAG653_6	53957	58604	susC-susD
+MAG653	PUL16	gnl|HZI|MAG653_7	75648	102001	susC-susD-unk-susC-unk-unk-unk-unk-GH97-unk-GH146

@@ -1,0 +1,260 @@
+---
+title: "RNAseq_PMUR in vivo contrast"
+author: "Eric J.C. Galvez"
+date: "12/9/2019"
+output: 
+  html_document: 
+    highlight: pygments
+    theme: flatly
+    code_download: true
+    graphics: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: inline
+---
+__Last modification:__ `r format(Sys.time(), '%d %B, %Y')`
+
+@EricJCGalvez
+
+<!-- more -->
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+# check.packages function: install and load multiple R packages.
+# Check to see if packages are installed. Install them if they are not, then load them into the R session.
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE, warn.conflicts = FALSE, quietly=TRUE)
+}
+
+# Usage example
+packages<-c("pcaExplorer", "tidyverse", "DESeq2", "dplyr", 
+            "ggthemes", "RColorBrewer", "knitr", "ggpubr", 
+            "gplots", "genefilter", "ComplexHeatmap", "circlize", 
+            "stringr", "here")
+
+check.packages(packages)
+```
+
+```{r}
+source(file = "../R/prok_rnaseq_funs.R")
+```
+
+#### Set input file paths
+
+```{r}
+
+## RNAseq counts and genome annotation path
+############################################################
+dir_counts <- here("data/")
+strain <- c("PMUR")
+straingff <- "../genome_refs/PMUR/PMUR_nofasta.gff"
+
+### select pair wise contrast 
+############################################################
+control_con <- c("PMUR-eSPF")
+exp_con1 <- c("PMUR-Conv")
+
+```
+
+
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+
+sampleFiles <- grep(strain, list.files(dir_counts), value=TRUE)
+
+sampleCondition <- stringr::str_match(sampleFiles, "_(.*?).counts") %>%
+                    gsub("(r.)_", "",. )
+sampleCondition <- sampleCondition[,2]
+
+sampleTable <- data.frame(sampleName = sampleFiles,
+                          fileName = sampleFiles,
+                          condition = sampleCondition)
+sampleTable$sampleName <- gsub(".counts", "", sampleTable$sampleName)
+sampleTable
+```
+
+#### Loading Files and defining design = Unsupervised 1
+
+## DEseq2 normalization
+
+### Norm_var and filtering
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+ddsHTSeq <- DESeqDataSetFromHTSeqCount(sampleTable = sampleTable,
+                                       directory =  dir_counts,
+                                       design= ~ 1)
+ddsHTSeq
+dds <- estimateSizeFactors(ddsHTSeq)
+
+dds$condition<- relevel(dds$condition, ref = control_con)
+
+ddsFull <- DESeq(dds) 
+res <- results( ddsFull )
+
+boxplot(log10(assays(ddsFull)[["cooks"]]), range=0, las=2)
+
+```
+
+### plotDispEsts
+
+```{r}
+plotDispEsts(ddsFull)
+```
+
+
+## Samples similarity
+### Heat map
+
+```{r}
+rldFull <- DESeq2::rlog( ddsFull )
+#head( assay(rld) )
+
+sampleDists <- dist( t( assay(rldFull) ) )
+#sampleDists
+
+sampleDistMatrix <- as.matrix( sampleDists )
+rownames(sampleDistMatrix) <- paste( rldFull$Sample_labs,
+rldFull$Treatment, sep="-" )
+colnames(sampleDistMatrix) <- NULL
+
+colours = colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+heatmap.2( sampleDistMatrix, trace="none", col=colours, labRow= rldFull$condition,
+           labCol= rldFull$condition, cexRow = 0.8, cexCol = 0.8, srtCol=45, margins =c(6.5,8) )
+
+```
+
+
+## PCA analysis 
+```{r}
+pcaData <- plotPCA(rldFull, intgroup=c("condition"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+p <- ggplot(pcaData, aes(PC1, PC2, color=condition, shape=condition)) +
+  geom_point(size=6, alpha=0.7) +
+  scale_color_gdocs() +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  scale_shape_manual(values = c(18 : 21)) + 
+  geom_vline(xintercept = 0, linetype="dashed", color = "black", size=0.2) +
+          geom_hline(yintercept = 0, linetype="dashed", color = "black", size=0.2)
+ p + theme_bw(20)
+```
+
+
+## Pairwise comparisons
+
+############## Loop #############
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+# Subsampling a specific treatment
+
+exps <- c(exp_con1)
+
+pcals <- list()
+pcaloads <- list()
+top30_loads <- list()
+mals <- list()
+deseq_mat <- list()
+
+#i=exp_con1
+
+#source('~/.active-rstudio-document')
+```
+
+
+```{r, warning=FALSE, results='hide', error=FALSE, message=FALSE}
+
+for(i in unique(exps)) {
+## subset function, filtering  and deseq execution
+dds_ko10 <- select_dds_pair(x = ddsFull, control = control_con, expcond = i, 
+                            minreads = 10, minsamples = 4)
+## extract results and rld transformation for PCA
+contrast_name <- DESeq2::resultsNames(dds_ko10)[2]
+res_exp <- DESeq2::results(dds_ko10, contrast=c("condition", i, control_con))  ## ORDEN matters !!
+rld <- DESeq2::rlog(dds_ko10)
+
+## PCAs
+##################################################
+
+pcals[[i]] <- pcaExplorer::pcaplot(rld, intgroup = c("condition"), ntop = 1000,
+        pcX = 1, pcY = 2, title = contrast_name, text_labels = F,
+        ellipse = TRUE, ) + scale_fill_manual(values = c( "#B31B21", "steelblue")) +
+        scale_color_manual(values = c( "#B31B21", "steelblue")) 
+
+# pcaplot3d(rld, intgroup = c("condition"),ntop = 1000,
+#        pcX = 1, pcY = 2, pcZ = 3)
+
+## hi_loadings top 10 signatures
+#################################################
+
+pcaobj <- prcomp(t(assay(rld))) 
+
+pcaloads[[i]]<- hi_loadings_plot(pcaobj, topN = 10) #annotation = annotation
+
+## getting gff features 
+#################################################
+gene_product_df <- get_genproducts(straingff)
+
+## Top 30 up and 30down geneSig from PCA 
+
+## making rownames as a column in a dataframe
+df <- as.data.frame(get_top_pca_genes(pcaobj, topN = 30, whichpc = 1))
+df <- data.table::setDT(df, keep.rownames = TRUE)[] 
+colnames(df) <-  c("gene_id", "pca_loadings")
+
+gene_df <- as.data.frame(assay(dds_ko10))
+gene_df <- data.table::setDT(gene_df, keep.rownames = TRUE)[] 
+colnames(gene_df)[1] <- c("gene_id") 
+
+all_genes_norm <- merge(gene_df, gene_product_df, by="gene_id")  %>%
+                 select(gene_id, product, 2:ncol(gene_df))
+
+top30_loads[[i]] <- all_genes_norm %>%
+                 filter(., gene_id %in% df$gene_id)
+
+##### Plot MA function
+###################################
+## DEseq
+###################################
+## mergind results with annotation
+diff_express=res_exp
+diff_express$GENE <- gene_product_df$GeneID[match(row.names(diff_express),
+                                                  row.names(gene_product_df))]
+diff_express$Name <- gene_product_df$Name[match(row.names(diff_express),
+                                                  row.names(gene_product_df))]
+
+plot_lab <- paste0(i, " -> ", control_con)
+color_palette <-  c("#B31B21", "#1465AC", "#f7f7f7")
+mals[[i]] <- MA_plot(x = diff_express, color=color_palette, main_lab = plot_lab, gename = "Name")
+#import 8 x 9 
+
+## DEseq MAtrix
+diff_express_df <- as.data.frame(diff_express) %>%
+                 select(GENE, Name, 1:ncol(diff_express))
+
+deseq_mat[[i]] <- diff_express_df
+}
+```
+
+############################################################
+
+## `r exp_con1` vs `r control_con`
+
+```{r, fig.height=6, fig.width=7, fig.align='center'}
+pcals[[exp_con1]]
+#eport 4X6
+
+mals[[exp_con1]]
+# 6x6
+#plotly::ggplotly(mals[[exp_con1]]) %>%
+#        plotly::layout(legend = list(orientation = 'h'))
+
+DT::datatable(deseq_mat[[exp_con1]], filter = 'top',
+          extensions = 'Buttons', options = list(
+          dom = 'Bfrtip',
+          buttons = c('copy', 'csv', 'excel'),
+          pageLength = 5, autoWidth = T)
+              )
+```
+
+

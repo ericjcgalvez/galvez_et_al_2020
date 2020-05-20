@@ -1,0 +1,4 @@
+genome	pulid	contigid	start	end	pattern
+MAG605	PUL1	gnl|HZI|MAG605_48	11766	16989	susD-susC
+MAG605	PUL2	gnl|HZI|MAG605_53	9270	14609	susD-susC
+MAG605	PUL3	gnl|HZI|MAG605_73	4976	9307	susC-susD

@@ -1,0 +1,5 @@
+genome	pulid	contigid	start	end	pattern
+MAG599	PUL1	gnl|HZI|MAG599_27	17817	28396	GT51-unk-unk-unk-susD-susC
+MAG599	PUL2	gnl|HZI|MAG599_3	5320	16282	susC-susD-unk-unk-unk-GH3
+MAG599	PUL3	gnl|HZI|MAG599_32	6252	11335	susC-susD
+MAG599	PUL4	gnl|HZI|MAG599_8	34919	60612	susC-susD-unk-GH16-GH16-GH3-GH128-unk-unk-susC-unk-unk-unk-unk-susC
