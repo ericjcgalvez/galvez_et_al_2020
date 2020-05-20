@@ -9,8 +9,9 @@ Eric J.C. Gálvez, Aida Iljazovic, Lena Amend, Till Robin Lesker, Thibaud Renaul
 - Dominant Prevotella copri MAGs from an Italian cohort with three distinct dietary habits (De Filippis et al., 2019. Cell Host Microbe)
 									
 Transcriptome analysis and R customised code:
-**RNAseq_mouse_Prevotella_spp_fig3** - RNAseq analysis for three dominant mouse Prevotella species (PINT, PROD, PMUR) in vivo and in vitro. 
-**pMAGs_PULs_in_DeFilippis_et_al_2019_fig6** - Diversity analysis of p. copri MAGs and its intestinal dominance in three different diets
+- **RNAseq_mouse_Prevotella_spp_fig3** - RNAseq analysis for three dominant mouse Prevotella species (PINT, PROD, PMUR) in vivo and in vitro. 
+
+- **pMAGs_PULs_in_DeFilippis_et_al_2019_fig6** - Diversity analysis of p. copri MAGs and its intestinal dominance in three different diets
 
 #### DATA AVAILABILITY
 NGS data are under subbimision at the NCBI: 
